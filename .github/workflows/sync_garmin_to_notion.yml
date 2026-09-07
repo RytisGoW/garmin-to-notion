@@ -2,14 +2,14 @@ name: Sync Garmin to Notion
 
 on:
   schedule:
-    - cron: '0 1 * * *' # Daily
+    - cron: '17 5,17 * * *' # Daily
   workflow_dispatch:
     inputs:
       GARMIN_ACTIVITIES_FETCH_LIMIT:
         type: number
         default: 10
 env:
-  TZ: 'America/Toronto'
+  TZ: 'Europe/Vilnius'
 
 jobs:
   sync:
